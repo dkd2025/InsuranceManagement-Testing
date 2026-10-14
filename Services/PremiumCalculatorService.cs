@@ -131,5 +131,36 @@ namespace InsuranceManagementSystem.Services
 
             return Math.Round(premium, 2);
         }
+
+        //Add a dead-code test
+
+        private string CodeForensicUnusedEntity = "Test";
+        private void CodeForensicDeadCodeTest()
+        {
+            Console.WriteLine("This method is never called");
+        }
+
+        public int DeadCodeExample()
+        {
+            return 10;
+
+            // Intentionally unreachable:
+            // int unused = 20;
+        }
+
+        public decimal TestNestedCall(decimal amount)
+        {
+            return ValidateAmountAndCalculate(amount);
+        }
+
+        private decimal ValidateAmountAndCalculate(decimal amount)
+        {
+            return CalculateAdjustedAmount(amount);
+        }
+
+        private decimal CalculateAdjustedAmount(decimal amount)
+        {
+            return Math.Round(amount * 1.1m, 2);
+        }
     }
 }
