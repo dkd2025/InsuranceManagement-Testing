@@ -7,7 +7,7 @@ using InsuranceManagementSystem.Models;
 
 namespace InsuranceManagementSystem.Controllers
 {
-    [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "AdminUser")]
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
